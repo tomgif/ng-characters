@@ -1,0 +1,119 @@
+.marathon-arrows {
+    background: url(/img/marathon-arrows.png) no-repeat center 80px;
+    min-height: 570px;
+    text-align: center;
+}
+.marathon-arrows .quest-marathon__item + .quest-marathon__item {
+    margin-left: 225px;
+}
+.quest-marathon__item {
+    display: inline-block;
+    position: relative;
+}
+.marathon-arrows .quest-marathon__item {
+    position: relative!important;
+}
+.quest-icon {
+    display: inline-block;
+    background: url(/img/marathon-icons.png) no-repeat 0 0;
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+.quest-icon--notstarted {
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+}
+.quest-icon--inprogress {
+    opacity: .6;
+}
+.quest-icon--2 {
+	background-position:-80px 0;
+}
+.quest-icon--3 {
+	background-position:-160px 0;
+}
+.quest-icon--4 {
+	background-position:-240px 0;
+}
+.quest-icon--5 {
+	background-position:-320px 0;
+}
+.quest-icon--6 {
+	background-position:-400px 0;
+}
+.quest-icon--7 {
+	background-position:-480px 0;
+}
+.quest-icon--8 {
+	background-position:-560px 0;
+}
+.quest-icon--9 {
+	background-position:-640px 0;
+}
+.quest-icon--10 {
+	background-position:-720px 0;
+}
+.quest-icon--11 {
+	background-position:-800px 0;
+}
+.quest-icon--12 {
+	background-position:-880px 0;
+}
+.quest-icon--13 {
+	background-position:-960px 0;
+}
+.quest-icon--14 {
+	background-position:-1040px 0;
+}
+.quest-icon--15 {
+	background-position:-1120px 0;
+}
+.quest-hint {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    padding: 5px;
+    background: #000;
+    left: 110%;
+    top: -15px;
+    border-radius: 3px;
+    width: 190px;
+    font-size: 11px;
+    z-index: 2;
+    color: #fff;
+}
+.quest-icon:hover + .quest-hint {
+    opacity: 1;
+    visibility: visible;
+}
+.quest-hint:before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-width: 6px;
+    border-color: transparent #000 transparent transparent;
+    transition: all .3s;
+}
+.quest-hint b {
+    display: block;
+    color: #fff;
+}
+.increment{
+    position: absolute;
+    right: -40px;
+    top:0;
+}
+
+.chars-tags{
+    border-radius: 4px;
+    padding: 10px;
+    margin-right: 10px;
+}

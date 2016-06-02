@@ -1,0 +1,9 @@
+<h2>Прогресс марафона</h2>
+<p>Выбери персонажа из списка или создай нового.</p>
+<span class="chars-tags" ng-repeat="(key, char) in $ctrl.chars">
+	<a href="#!/marathon/{{key}}">{{char.name}}</a>
+</span>
+<span>
+	<input type="text" ng-model="newName">
+	<button class="btn btn-success" ng-click="$ctrl.addChar(newName)">+</button>
+</span>

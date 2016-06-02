@@ -1,0 +1,63 @@
+<h1 class="text-center">Персонаж: {{$ctrl.char.name}}</h1>
+<div class="marathon-arrows">
+	<div style="margin-bottom:44px;">
+		<div class="quest-marathon__item ">
+			<i class="quest-icon quest-icon--11 {{$ctrl.char.values[0] | progress}}"></i>
+			<span class="quest-hint"><b>Великие странствия ({{$ctrl.char.values[0]}} из 6)</b> Выполнить задание "Дом за скрепку".</span>
+			<button class="btn btn-success increment" ng-click="$ctrl.addQuest(0, 6)" ng-show="$ctrl.char.values[0] < 6">+</button>
+		</div>
+	</div>
+
+	<div style="margin-bottom:64px;">
+
+		<div class="quest-marathon__item ">
+			<i class="quest-icon quest-icon--12 {{$ctrl.char.values[1] | progress}}"></i>
+			<span class="quest-hint"><b>А вдруг повезёт ({{$ctrl.char.values[1]}} из 5)</b>Выполнить задание в 50 комнате "Куба судьбы".</span>
+			<button class="btn btn-success increment" ng-click="$ctrl.addQuest(1, 5)" ng-show="$ctrl.char.values[1] < 5">+</button>
+		</div>
+
+		<div class="quest-marathon__item ">
+			<i class="quest-icon quest-icon--14 {{$ctrl.char.values[2] | progress}}"></i>
+			<span class="quest-hint"><b>Карта сокровищ ({{$ctrl.char.values[2]}} из 6)</b> Выполнить задание<br>"Старая карта 1".</span>
+			<button class="btn btn-success increment" ng-click="$ctrl.addQuest(2, 6)" ng-show="$ctrl.char.values[2] < 6">+</button>
+		</div>
+
+	</div>
+
+	<div style="margin-top:-4px;">
+
+		<div class="quest-marathon__item ">
+			<i class="quest-icon quest-icon--5 {{$ctrl.char.values[3] | progress}}"></i>
+			<span class="quest-hint"><b>Поиск фракции ({{$ctrl.char.values[3]}} из 6)</b> Выполнить ежедневное часовое задание от лидера фракции.</span>
+			<button class="btn btn-success increment" ng-click="$ctrl.addQuest(3, 6)" ng-show="$ctrl.char.values[3] < 6">+</button>
+		</div>
+
+		<div class="quest-marathon__item ">
+			<i class="quest-icon quest-icon--7 {{$ctrl.char.values[4] | progress}}"></i>
+			<span class="quest-hint"><b>Могущественная сила ({{$ctrl.char.values[4]}} из 7)</b> Выполнить задание "Награда за заслуги" в Инее.</span>
+			<button class="btn btn-success increment" ng-click="$ctrl.addQuest(4, 7)" ng-show="$ctrl.char.values[4] < 7">+</button>
+		</div>
+	</div>
+
+	<div style="margin-bottom:44px;">
+		<div class="quest-marathon__item ">
+			<i class="quest-icon quest-icon--15 {{$ctrl.char.values[5] | progress}}"></i>
+			<span class="quest-hint"><b>Охота начинается ({{$ctrl.char.values[5]}} из 6)</b> Выполнить ежедневное задание "Охотник за головами 2" для любых уровней.</span>
+			<button class="btn btn-success increment" ng-click="$ctrl.addQuest(5, 6)" ng-show="$ctrl.char.values[5] < 6">+</button>
+		</div>
+	</div>
+
+	<div>
+		<div class="quest-marathon__item ">
+			<i class="quest-icon quest-icon--1 {{$ctrl.char.values[6] | progress}}"></i>
+			<span class="quest-hint"><b>Серебряный свет ({{$ctrl.char.values[6]}} из 5)</b> Выполнить всю цепочку ежедневного задания и победить финального босса в Серебряной Цитадели в старом режиме.</span>
+			<button class="btn btn-success increment" ng-click="$ctrl.addQuest(6, 5)" ng-show="$ctrl.char.values[6] < 5">+</button>
+		</div>
+
+		<div class="quest-marathon__item ">
+			<i class="quest-icon quest-icon--9 {{$ctrl.char.values[7] | progress}}"></i>
+			<span class="quest-hint"><b>Хищные звери ({{$ctrl.char.values[7]}} из 7)</b> Выполнить цепочку заданий на получение призыва и убить одного из боссов: Эрцгерцог ада или Глабреавор.</span>
+			<button class="btn btn-success increment" ng-click="$ctrl.addQuest(7, 7)" ng-show="$ctrl.char.values[7] < 7">+</button>
+		</div>
+	</div>
+</div>
