@@ -5,8 +5,11 @@ angular
   
 angular.
   module('core.char').
-  factory('Char', ['$cookieStore', '$location', function($cookieStore, $location) {
-    var list = [];
+  factory('Char', ['$cookies', '$location', function($cookies, $location) {
+    var list = [],
+        life = new Date();
+
+    life.setDate(life.getDate() + 30); //куки на 30 дней
 
     return {
       addItem: addItem,
@@ -16,20 +19,29 @@ angular.
     };
 
     function addItem(item) {
+
+      //инициализация персонажа
       list.push({
         name: item,
-        values: Array.apply(null, new Array(8)).map(Number.prototype.valueOf,0)
+        values: Array.apply(null, new Array(8)).map(Number.prototype.valueOf, 0)
       });
-      $cookieStore.put('chars', list);
+
+      $cookies.put('chars', JSON.stringify(list), {expires: life});
       var lastIndex = list.length - 1;
+
+      //после создания - редирект
+      //todo: вынести из сервиса
       $location.path('/marathon/' + lastIndex);
     }
 
     function getList() {
-      var chars = $cookieStore.get('chars')
+
+      var chars = $cookies.get('chars');
+
       if (chars) {
-        list = chars; 
+        list = JSON.parse(chars); 
       }
+
       return list;
     }
 
@@ -39,6 +51,7 @@ angular.
 
     function setItem(index, total, charId){
       list[charId].values[index]++;
-      $cookieStore.put('chars', list);
+
+      $cookies.put('chars', JSON.stringify(list), {expires: life});
     }
 }]);

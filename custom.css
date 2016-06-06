@@ -1,3 +1,6 @@
+body{
+    background: #f6f1e7;
+}
 .marathon-arrows {
     background: url(/img/marathon-arrows.png) no-repeat center 80px;
     min-height: 570px;
@@ -25,68 +28,34 @@
 	-webkit-filter: grayscale(100%);
 	-ms-filter: grayscale(100%);
 }
-.quest-icon--inprogress {
-    opacity: .6;
-}
-.quest-icon--2 {
-	background-position:-80px 0;
-}
-.quest-icon--3 {
-	background-position:-160px 0;
-}
-.quest-icon--4 {
-	background-position:-240px 0;
-}
-.quest-icon--5 {
-	background-position:-320px 0;
-}
-.quest-icon--6 {
-	background-position:-400px 0;
-}
-.quest-icon--7 {
-	background-position:-480px 0;
-}
-.quest-icon--8 {
-	background-position:-560px 0;
-}
-.quest-icon--9 {
-	background-position:-640px 0;
-}
-.quest-icon--10 {
-	background-position:-720px 0;
-}
-.quest-icon--11 {
-	background-position:-800px 0;
-}
-.quest-icon--12 {
-	background-position:-880px 0;
-}
-.quest-icon--13 {
-	background-position:-960px 0;
-}
-.quest-icon--14 {
-	background-position:-1040px 0;
-}
-.quest-icon--15 {
-	background-position:-1120px 0;
-}
+.quest-icon--inprogress {opacity: .6}
+.quest-icon--2 {background-position:-80px 0}
+.quest-icon--3 {background-position:-160px 0}
+.quest-icon--4 {background-position:-240px 0}
+.quest-icon--5 {background-position:-320px 0}
+.quest-icon--6 {background-position:-400px 0}
+.quest-icon--7 {background-position:-480px 0}
+.quest-icon--8 {background-position:-560px 0}
+.quest-icon--9 {background-position:-640px 0}
+.quest-icon--10 {background-position:-720px 0}
+.quest-icon--11 {background-position:-800px 0}
+.quest-icon--12 {background-position:-880px 0}
+.quest-icon--13 {background-position:-960px 0}
+.quest-icon--14 {background-position:-1040px 0}
+.quest-icon--15 {background-position:-1120px 0}
 .quest-hint {
-    opacity: 0;
-    visibility: hidden;
     position: absolute;
     padding: 5px;
     background: #000;
     left: 110%;
-    top: -15px;
+    top: 0;
     border-radius: 3px;
     width: 190px;
     font-size: 11px;
     z-index: 2;
     color: #fff;
-}
-.quest-icon:hover + .quest-hint {
-    opacity: 1;
-    visibility: visible;
+    opacity: .8;
+    height: 100%;
 }
 .quest-hint:before {
     content: '';
@@ -102,14 +71,41 @@
     border-color: transparent #000 transparent transparent;
     transition: all .3s;
 }
+.quest-hint--left{left: -202px}
+.quest-hint--left:before{
+    border-color: transparent transparent transparent #000;
+    left: 100%;
+}
+.quest-hint--top{
+    left: -70%;
+    top: -110%;
+}
+.quest-hint--top:before{
+    left: 0;
+    border-color: #000 transparent transparent transparent;
+    right: 0;
+    margin: auto;
+    top: 115%;
+}
+
 .quest-hint b {
     display: block;
-    color: #fff;
+    color: #fbb05f;
+    font-size: 110%;
+}
+.quest-hint b span{
+    color: #
 }
 .increment{
     position: absolute;
-    right: -40px;
-    top:0;
+    right: 1px;
+    bottom: 6px;
+    border-radius: 0;
+    padding: 10px;
+    line-height: 0.6;
+    border: 0;
+    box-shadow: none;
+    outline: 0;
 }
 
 .chars-tags{
