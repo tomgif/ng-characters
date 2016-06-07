@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Marathon</title>
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
 
     <script src="vendor/angular.min.js"></script>
     <script src="vendor/angular-resource.min.js"></script>
@@ -21,11 +22,15 @@
     <script src="char-detail/char-detail.component.js"></script>
 
   </head>
-  <body>
-
-    <div class="container">
+  <body class="page">
+    <div class="wrapper container">
       <div ng-view></div>
     </div>
-
+    <div class="footer container text-right">
+      <hr>
+      Powered by <a href="https://angularjs.org/">AngularJS</a><br>
+      <a href="http://vk.com/tomgif"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-vk fa-stack-1x"></i></span></a>
+      <a href="https://www.instagram.com/virelt/"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-instagram fa-stack-1x"></i></span></a>
+    </div>
   </body>
 </html>

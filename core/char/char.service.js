@@ -15,7 +15,8 @@ angular.
       addItem: addItem,
       getList: getList,
       getById: getById,
-      setItem: setItem
+      setItem: setItem,
+      resetAll: resetAll
     };
 
     function addItem(item) {
@@ -53,5 +54,10 @@ angular.
       list[charId].values[index]++;
 
       $cookies.put('chars', JSON.stringify(list), {expires: life});
+    }
+
+    function resetAll(){
+      list = [];
+      $cookies.remove('chars');
     }
 }]);

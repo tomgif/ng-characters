@@ -1,9 +1,23 @@
-<h2>Прогресс марафона</h2>
-<p>Выбери персонажа из списка или создай нового.</p>
-<span class="chars-tags" ng-repeat="(key, char) in $ctrl.chars">
-	<a href="#!/marathon/{{key}}">{{char.name}}</a>
-</span>
-<span>
-	<input type="text" ng-model="newName" placeholder="Имя персонажа">
-	<button class="btn btn-success" ng-click="$ctrl.addChar(newName)">Создать</button>
-</span>
+<div class="disclaimer bg-info">
+	<p>Это приложение создано с целью, чтобы вы могли отмечать прогресс выполнения марафона. <br>Пожалуйста, не используйте реальные имена персонажей, а также названия аккаунтов.</p>
+</div>
+<div class="row">
+	<div class="col-md-9">
+		<span ng-repeat="(key, char) in $ctrl.chars">
+			<a class="tag bg-primary" href="#!/marathon/{{key}}">{{char.name}}</a>
+		</span>
+	</div>
+	<div class="col-md-3">
+		<div class="row">
+			<div class="col-md-12 arrow-hint arrow-hint-1"><input class="form-control" type="text" ng-model="newName" placeholder="Имя персонажа"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<button class="btn btn-success char-add arrow-hint arrow-hint-2" ng-click="$ctrl.addChar(newName)">Создать</button>	
+			</div>
+			<div class="col-md-6">
+				<button class="btn btn-danger char-reset" ng-click="$ctrl.reset()">Сбросить все</button>	
+			</div>
+		</div>
+	</div>
+</div>

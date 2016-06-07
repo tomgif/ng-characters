@@ -1,0 +1,171 @@
+body{
+    background: #f6f1e7;
+}
+.marathon-arrows {
+    background: url(/img/marathon-arrows.png) no-repeat center 80px;
+    min-height: 570px;
+    text-align: center;
+}
+.marathon-arrows .quest-marathon__item + .quest-marathon__item {
+    margin-left: 225px;
+}
+.quest-marathon__item {
+    display: inline-block;
+    position: relative;
+}
+.marathon-arrows .quest-marathon__item {
+    position: relative!important;
+}
+.quest-icon {
+    display: inline-block;
+    background: url(/img/marathon-icons.png) no-repeat 0 0;
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+.quest-icon--notstarted {
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+}
+.quest-icon--inprogress {opacity: .6}
+.quest-icon--2 {background-position:-80px 0}
+.quest-icon--3 {background-position:-160px 0}
+.quest-icon--4 {background-position:-240px 0}
+.quest-icon--5 {background-position:-320px 0}
+.quest-icon--6 {background-position:-400px 0}
+.quest-icon--7 {background-position:-480px 0}
+.quest-icon--8 {background-position:-560px 0}
+.quest-icon--9 {background-position:-640px 0}
+.quest-icon--10 {background-position:-720px 0}
+.quest-icon--11 {background-position:-800px 0}
+.quest-icon--12 {background-position:-880px 0}
+.quest-icon--13 {background-position:-960px 0}
+.quest-icon--14 {background-position:-1040px 0}
+.quest-icon--15 {background-position:-1120px 0}
+.quest-hint {
+    position: absolute;
+    padding: 5px;
+    background: #000;
+    left: 110%;
+    top: 0;
+    border-radius: 3px;
+    width: 190px;
+    font-size: 11px;
+    z-index: 2;
+    color: #fff;
+    opacity: .8;
+    height: 100%;
+}
+.quest-hint:before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-width: 6px;
+    border-color: transparent #000 transparent transparent;
+    transition: all .3s;
+}
+.quest-hint--left{left: -202px}
+.quest-hint--left:before{
+    border-color: transparent transparent transparent #000;
+    left: 100%;
+}
+.quest-hint--top{
+    left: -70%;
+    top: -110%;
+}
+.quest-hint--top:before{
+    left: 0;
+    border-color: #000 transparent transparent transparent;
+    right: 0;
+    margin: auto;
+    top: 115%;
+}
+
+.quest-hint b {
+    display: block;
+    color: #fbb05f;
+    font-size: 110%;
+}
+.quest-hint b span{
+    color: #
+}
+.increment{
+    position: absolute;
+    right: 1px;
+    bottom: 6px;
+    border-radius: 0;
+    padding: 10px;
+    line-height: 0.6;
+    border: 0;
+    box-shadow: none;
+    outline: 0;
+}
+
+button.btn, input{border-radius: 0 !important}
+*{box-sizing: border-box}
+
+html, .page{
+    height: 100%;
+}
+.wrapper{
+    position: relative;
+    min-height: 100%;
+    height: auto;
+    padding-bottom: 100px;
+}
+.footer{
+    position: relative;
+    height: 100px;
+    margin-top: -100px;
+}
+hr{
+    border-color: black;
+}
+.disclaimer{
+    margin: 20px 0;
+    padding: 20px;
+}
+.char-add, .char-reset{
+    width: 100%;
+    margin-top: 10px;
+}
+.tag{
+    color: #fff;
+    padding: 10px 20px;
+}
+.tag:link,
+.tag:visited,
+.tag:hover,
+.tag:active{
+    text-decoration: none;
+    color: #fff;
+}
+.arrow-hint{position: relative;}
+.arrow-hint:before{
+    position: absolute;
+    color: #000;
+    left: -30px;
+    font-size: 20px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.arrow-hint-1:before{
+    content: "1 \2192";
+    animation: go-left-right .5s infinite alternate;
+}
+.arrow-hint-2:before{
+    content: "2 \2192";
+    animation: go-left-right 1s infinite alternate;
+}
+@-webkit-keyframes go-left-right {
+    from {padding-left: 0}
+    to {padding-left: 10px}
+}

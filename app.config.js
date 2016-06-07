@@ -11,7 +11,7 @@ angular.
           template: '<char-list></char-list>'
         }).
         when('/marathon/:charId', {
-          template: '<char-list></char-list><hr><char-detail></char-detail>'
+          template: '<char-list></char-list><char-detail></char-detail>'
         }).
         otherwise('/marathon/');
     }
